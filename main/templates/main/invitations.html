@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} Приглашения {% endblock %}
+
+{% block content %}
+
+    <form method="POST" action="{% url 'index' %}">
+        {% csrf_token %}
+        <button class="button-blue" style="float: left;" type="submit">Все дела</button>
+    </form>
+
+    {% if no_invitations %}
+    <h3 class="invitation-h3">Список приглашений пуст</h3>
+    {% endif %}
+
+    {% for invitation in invitations %}
+        <h3 class="invitation-h3">Приглашения:</h3>
+        <ul>
+            <li class="task-item">
+                <p>От {{invitation.user_from.username}} в "{{ invitation.list.title }}"</p>
+
+                <form method="POST" action="{% url 'accept_invitation' invitation.id %}">
+                    {% csrf_token %}
+                    <button class="delete-button" type="submit">
+                        Принять
+                    </button>
+                </form>
+
+                <form method="POST" action="{% url 'reject_invitation' invitation.id %}">
+                    {% csrf_token %}
+                    <button class="delete-button" type="submit">
+                        Отклонить
+                    </button>
+                </form>
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock %}
