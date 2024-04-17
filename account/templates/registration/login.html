@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+    <h1>Вход</h1>
+    {% if form.errors %}
+        <p>
+            Логин и пароль не совпадают.
+            Пожалуста, попробуйте снова.
+        </p>
+    {% endif %}
+
+    <form action="{% url 'login' %}" method="POST">
+        <input type="text" name="username" placeholder="Логин" required>
+        <br>
+        <input type="password" name="password" placeholder="Пароль" required>
+        {% csrf_token %}
+        <p><input type="submit" value="Войти" class="button-blue"></p>
+    </form>
+
+    <p>
+        <a href="{% url 'password_reset' %}">Забыли пароль?</a>
+        |
+        <a href="{% url 'register' %}">Регистрация</a>
+    </p>
+{% endblock %}

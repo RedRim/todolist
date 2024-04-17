@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cherry Bomb One', cursive;
+    font-family: 'Rubik', sans-serif;
+    background-color: #f6f8fa; /* Светлый фон */
+    color: #333; /* Темный текст */
+    text-align: center;
+}
+
+#header {
+    background-color: #24292e; /* Темный фон шапки */
+    padding: 10px;
+}
+
+#main-content {
+    background-color: #fff; /* Белый фон основного контента */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень вокруг основного контента */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative; /* Добавляем позиционирование */
+}
+
+.content-header {
+    position: absolute; /* Абсолютное позиционирование внутри #main-content */
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 13px;
+}
+
+a {
+    color: #0366d6; /* Синий цвет для ссылок */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+    text-align: center;
+}
+
+a:hover {
+    color: #0058a3; /* Темно-синий цвет ссылки при наведении */
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+h1 {
+    margin-top: 40px; /* Добавляем верхний отступ в 20px */
+}
+
+.invitation-h3 {
+    margin-top: 40px; /* Добавляем верхний отступ в 20px */
+}
+
+#task-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.list-title {
+    flex-grow: 1;
+    text-align: left; /* Центрирование текста */
+    margin-right: 10px;
+}
+
+.add-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.add-list-form input[type="text"] {
+    flex-grow: 1;
+    width: 578px; /* Займет 100% ширины task-list */
+    border: 1px solid #ccc; /* Примените граничный стиль по вашему выбору */
+    padding: 10px; /* Ваши текущие стили для padding */
+    border-radius: 5px; /* Ваши текущие стили для border-radius */
+    margin-top: 0px; /* Ваши текущие стили для margin-top */
+}
+
+.add-participant-form input[type="text"] {
+    flex-grow: 1;
+    width: 350px; /* Займет 100% ширины task-list */
+    border: 1px solid #ccc; /* Примените граничный стиль по вашему выбору */
+    padding: 10px; /* Ваши текущие стили для padding */
+    border-radius: 5px; /* Ваши текущие стили для border-radius */
+    margin-top: 0px; /* Ваши текущие стили для margin-top */
+}
+
+/* Добавьте стили для формы, аналогичные стилям для существующих листов */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 100px;
+    margin: 10px 0;
+}
+
+.task-item a {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.participants-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.participants-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.participants-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.participants-list li {
+    margin-bottom: 5px;
+}
+
+.participants-container h3 {
+    margin-top: 0; /* Убирает пустое пространство сверху */
+}
+
+/* Стили для полей ввода */
+input[type="text"], input[type="password"] {
+    width: 200px; /* Ширина полей ввода */
+    height: 22px; /* Высота полей ввода */
+    font-size: 20px; /* Размер шрифта в полях ввода */
+    text-align: center; /* Центрирование текста в поле ввода */
+    padding: 10px; /* Внутренние отступы в полях ввода */
+    border-radius: 8px; /* Скругление углов полей ввода */
+    margin: 10px 0; /* Расстояние между полями ввода */
+}
+
+/* Стили для сообщения об ошибке */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.errors {
+    color: red; /* Цвет текста для ошибок */
+    padding: 10px; /* Внутренние отступы */
+    margin-top: 10px; /* Отступ сверху */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.errors ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding-left: 0; /* Убираем отступ слева */
+}
+
+.errors ul li {
+    margin-bottom: 5px; /* Отступ между элементами списка */
+}
+
+.delete-button {
+    background-color: #fff;
+    color: #656565;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none; /* Убираем фокусное выделение */
+    margin-top: 5px;
+}
+
+.delete-button:hover {
+    color: red;
+}
+
+.check-button {
+    background: none; /* Убираем фон */
+    border: none; /* Убираем границу */
+    padding: 0; /* Убираем внутренние отступы */
+    cursor: pointer; /* Делаем курсор указателем */
+}
+
+/* Стиль кнопки в состоянии фокуса */
+.check-button:focus {
+    outline: none; /* Убираем стандартную обводку при фокусировке */
+    box-shadow: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 25px; /* Задаем желаемую высоту элемента */
+}
+
+
+.task-item .check-button,
+.task-item .delete-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Дизайн кнопки с классом "blue" */
+.button-blue {
+    background-color: #007bff; /* Синий цвет фона */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Убираем границу */
+    padding: 10px 20px; /* Задаем внутренние отступы */
+    border-radius: 5px; /* Скругляем углы */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+}
+
+/* Дизайн кнопки "blue" при наведении */
+.button-blue:hover {
+    background-color: #034b98; /* Темно-синий цвет фона при наведении */
+}
+
+.add-list-form form {
+    display: flex;
+    align-items: center;
+}
+
+/* Удалите фон и границу у кнопки "плюс" */
+.add-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 11px;
+    left: 565px;
+}
+
+.add-button svg {
+    width: 20px; 
+    height: 20px;
+    fill: currentColor; /* Задаем цвет иконки, используя текущий цвет текста */
+}
+
+/* Задайте цвет "плюса" при наведении */
+.add-button:hover svg {
+    fill: green; /* Замените на желаемый цвет */
+}
+
+/* Удалите фон и границу у кнопки "плюс" */
+.add-participant-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    top: 2px; /* Перемещаем иконку на середину вертикали */
+    right: 0px; /* Добавляем отступ справа */
+}
+
+.add-participant-button svg {
+    width: 20px; 
+    height: 20px;
+    fill: currentColor; /* Задаем цвет иконки, используя текущий цвет текста */
+}
+
+/* Задайте цвет "плюса" при наведении */
+.add-participant-button:hover svg {
+    fill: green; /* Замените на желаемый цвет */
+}
