@@ -122,8 +122,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# EMAIL_HOST = 'smtp.mail.ru'
-# EMAIL_HOST_USER = 'stepanchernykh@mail.ru'
-# EMAIL_HOST_PASSWORD = 'swdbFNz0rJZenpfEzaP9'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+
